@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <!--点击按钮之后，在本活动中跳出的对话框-->
+    <!--一个编辑框：提示用户输入要拦截的电话号码-->
+    <TextView
+        style="@style/TitleStyle"
+        android:text="添加黑名单号码"/>
+
+    <EditText
+        android:id="@+id/et_refused_phone"
+        android:hint="请输入要拦截的号码"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--一个单选组合框，拦截形式-->
+    <RadioGroup
+        android:id="@+id/rg_refused_way"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+           <RadioButton
+               android:id="@+id/rbt_msg"
+               android:text="短信"
+               android:checked="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rbt_phone"
+            android:text="电话"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rbt_all"
+            android:text="所有"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <!--两个按钮，确认和取消-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_ok"
+            android:text="确认"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/bt_not_ok"
+            android:text="取消"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

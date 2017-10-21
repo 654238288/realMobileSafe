@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.liujingjing.mobilesafe"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- 设置用户权限 -->
+    <!-- 访问网络连接，可能产生GPRS流量 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序写入外部存储，如SD卡上写文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许其他程序读取sim卡 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许读取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 允许监听开关机广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 允许发送短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <!-- 允许接收短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- //获取准确GPS坐标的权限 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+    <!-- //允许模拟器模拟位置坐标的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- //允许手机震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- //允许在手机窗体上弹出一个对话框(挂载一个view) -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- //允许监听手机去电 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- 允许读取手机其他应用缓存信息 -->
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <!--程序锁模块获取栈的权限-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!--5.0以后不能直接通过获取运行栈的方法去获取其他应用的信息，因此引入这个权限来获取运行应用信息-->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!-- <uses-permission android:name="android.permission.CLEAR_APP_CACHE" /> -->
+    <!-- //获取粗略坐标的权限(网络定位时使用) -->
+    <!-- android:theme="@android:style/Theme.Light.NoTitleBar">去除应用头部标题 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MyApplication.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MyApplication.activity.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MyApplication.activity.SettingActivity" />
+        <activity android:name=".MyApplication.activity.SetupOverActivity" />
+        <activity android:name=".MyApplication.activity.Setup1Activity" />
+        <activity android:name=".MyApplication.activity.Setup2Activity" />
+        <activity android:name=".MyApplication.activity.Setup3Activity" />
+        <activity android:name=".MyApplication.activity.Setup4Activity" />
+        <activity android:name=".MyApplication.activity.ContactsActivity" />
+        <activity android:name=".MyApplication.activity.BaseSetupActivity" />
+        <activity android:name=".MyApplication.activity.AToolActivity" />
+        <activity android:name=".MyApplication.activity.QuerryAddressActivity" />
+        <activity
+            android:name=".MyApplication.activity.ToastLocationActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- android:theme="@android:style/Theme.Translucent"设置该活动为透明的 -->
+        <!-- android:theme="@style/myTransparent"自定义透明背景 -->
+        <activity android:name=".MyApplication.activity.BlackPhoneActivity" />
+        <activity android:name=".MyApplication.activity.BaseActivity" />
+        <activity android:name=".MyApplication.activity.WipeCacheDataActivity" />
+        <activity android:name=".MyApplication.activity.AppManagerActivity" />
+        <activity android:name=".MyApplication.activity.AppLockActivity" />
+        <activity android:name=".MyApplication.activity.EnterAppActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true">
+    <!--配置该活动启动模式为单例模式，则该活动会在一个单独的任务栈里，而不依赖于手机卫士的应用，就不会出现输入程序锁密码之后回到手机卫士的页面-->
+    <!--excludeFromRecents="true" 退出手机卫士进入加锁应用的输入密码界面时，不再任务栈显示手机卫士的图标，true为不显示最近应用图标，false相反-->
+        </activity>
+
+        <receiver android:name=".MyApplication.receiver.BootBroadcastReceiver">
+            <intent-filter>
+
+                <!-- 监听开关机的广播 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听远程锁屏以及清除数据等的广播 -->
+        <receiver
+            android:name=".MyApplication.receiver.DeviceAdmin"
+            android:description="@string/sample_device_admin_description"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 桌面小部件 -->
+        <receiver
+            android:name=".MyApplication.receiver.MyAppWidgetProvider"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+
+        <provider
+            android:name=".db.dao.BlackNumberProvider"
+            android:authorities="com.example.liujingjing.mobilesafe.db.dao.BlackNumberProvider"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- 监听短信内容 5.0以后因为广播是标准广播，都能收到，安全起见，把这个做法拿掉了，可以使用监听数据库来监听短信内容 -->
+        <!--
+        <receiver android:name=".activity.receiver.SmsReceiver">
+            <intent-filter android:priority="10000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <service
+            android:name=".MyApplication.service.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyApplication.service.PhoneLocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyApplication.service.BlackPhoneService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyApplication.service.SmsService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyApplication.service.UpdateWidgetService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".MyApplication.service.UpdateWidgetService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <Service
+            android:name=".activity.service.MonitorService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".MyApplication.service.LockAppService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+    </application>
+
+</manifest>

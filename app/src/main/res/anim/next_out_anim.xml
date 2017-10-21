@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--下一页的移出动画(x轴从0到负的屏幕宽度(-100%p)，y轴不变)-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXDelta="0"
+    android:toXDelta="-100%p"
+    android:duration="500">
+</translate>

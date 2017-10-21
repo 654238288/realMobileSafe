@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--因为每个页面都用到了这个文本样式，因此封装到style中，方便引用-->
+    <TextView
+        android:id="@+id/tv_Title"
+        style="@style/TitleStyle"
+        android:text="@string/title_name"/>
+
+    <!--滚动的文字效果，自定义控件,重写获得焦点方法，只有得到焦点，才能显示滚动效果-->
+    <!--android:marqueeRepeatLimit="marquee_forever" 限制滚动时长为一直滚动-->
+    <!--android:ellipsize="marquee" 设置文字效果为滚动-->
+    <!--android:singleLine="true" 设置文本内容放在一行显示-->
+    <com.example.liujingjing.mobilesafe.MyApplication.view.TitleView
+        android:id="@+id/tv_marqueeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:textSize="12sp"
+        android:text="@string/recycle_text"
+        android:singleLine="true"
+        android:padding="8dp"
+        android:textColor="#000"
+        />
+
+    <!--主页面展示的九宫格功能列表-->
+    <!--android:numColumns="3" 设置分成三列展示-->
+    <!--android:verticalSpacing="8dp" 设置上下行间距-->
+        <GridView
+        android:id="@+id/gv_itemView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="8dp"
+        ></GridView>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:cycles="7" 动画播放的速率-->
+<cycleInterpolator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:cycles="7">s
+</cycleInterpolator>

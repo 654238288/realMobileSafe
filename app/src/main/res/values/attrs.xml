@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--按照android源码中自定义控件的规则定义-->
+<resources>
+    <declare-styleable name="com.example.liujingjing.mobilesafe.activity.View.SettingItemsView">
+        <attr name="destitle" format="string"></attr>
+        <attr name="deson" format="string"></attr>
+        <attr name="desoff" format="string"></attr>
+    </declare-styleable>
+</resources>

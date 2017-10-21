@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">mobileSafe</string>
+    <string name="title_name">function list</string>
+    <string name="recycle_text">you are my little apple,i love you more and much more,
+    your red face warmed my spirit,lighting my life fire!</string>
+
+    <!--定义homeActivity的九宫格数组-->
+    <string-array name="arr_title_name">
+        <item>mobileSafe</item>
+        <item>communicate</item>
+        <item>softMan</item>
+        <item>taskManager</item>
+        <item>netManager</item>
+        <item>trojan</item>
+        <item>cleanCache</item>
+        <item>ATools</item>
+        <item>settings</item>
+    </string-array>
+
+    <string name="sample_device_admin">手机卫士设备管理器</string>
+    <string name="sample_device_admin_description">一键锁屏，激活，清除数据</string>
+</resources>

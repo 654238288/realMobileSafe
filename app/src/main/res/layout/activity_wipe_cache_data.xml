@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <TextView
+        style="@style/TitleStyle"
+        android:gravity="left"
+        android:text="清理缓存"/>
+        <Chronometer
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format="00:00:00"
+            android:gravity="center"
+            android:id="@+id/timer"/>
+      <Button
+          android:id="@+id/bt_clear_now"
+          android:text="立即清理"
+          android:layout_alignParentRight="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <!--该进度条要在清理过程中显示三种状态，准备清理，清理中，清理完成，需要一个背景选择器-->
+    <ProgressBar
+        android:id="@+id/pg_cache_clean_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cache_clean_progressbar_bg"
+        style="@android:style/Widget.ProgressBar.Horizontal"/>
+    <TextView
+        android:text="正在清理缓存应用"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 将所有的TextView都包裹在内部(将TextView从头部做插入),以满足scrollView有一个子节点 -->
+        <LinearLayout
+            android:id="@+id/ll_add_text"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

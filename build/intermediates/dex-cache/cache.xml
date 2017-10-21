@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/liujingjing/LJJ/githubpro/MobileSafe/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1f21164cfe379800ef83b7c544c0f3ee97dd57a4">
+        <dex dex="/home/liujingjing/LJJ/githubpro/MobileSafe/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8f841202b07c27fb49bee695a20d036140e146d4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/liujingjing/LJJ/githubpro/MobileSafe/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/liujingjing/LJJ/githubpro/MobileSafe/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1b064aa231cf7aa25c965a3e0989db6c6d0ca4d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/liujingjing/LJJ/githubpro/MobileSafe/app/libs/mytext.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="87b077345e0b443118d0d9cbae55f7440c100084">
+        <dex dex="/home/liujingjing/LJJ/githubpro/MobileSafe/app/build/intermediates/pre-dexed/debug/mytext_0d214d496b045a0a87527a3c2e5ab5a5783d84c0.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/liujingjing/LJJ/githubpro/MobileSafe/app/libs/mytext.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="87b077345e0b443118d0d9cbae55f7440c100084">
+        <dex dex="/home/liujingjing/LJJ/githubpro/MobileSafe/app/build/intermediates/transforms/dex/debug/folders/1000/2/mytext_0d214d496b045a0a87527a3c2e5ab5a5783d84c0/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--处理渐变色
+    android:angle="45"处理渐变色的角度，必须是45的倍数-->
+    <gradient
+        android:startColor="#cccc"
+        android:endColor="#cccc"
+        android:angle="45"
+        >
+    </gradient>
+
+    <!--处理圆角的弧度-->
+    <corners android:radius="7dp"/>
+
+</shape>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--下一页的移入动画(x轴从正的屏幕宽度(-100%p)到0，y轴不变)-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXDelta="100%p"
+    android:toXDelta="0"
+    android:duration="500">
+</translate>

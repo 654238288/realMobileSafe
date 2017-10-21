@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.liujingjing.mobilesafe.MyApplication.activity.Setup4Activity">
+
+    <!--标题，复选框，四个点，图片，两个按钮-->
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="4.恭喜您，设置完成"/>
+
+    <CheckBox
+        android:id="@+id/cb_setup_over"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您没有开启防盗保护"/>
+
+    <!--四个点-->
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_online"/>
+    </LinearLayout>
+
+    <!--最中间一张图片，底部一个下一页的按钮-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--图片-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_centerInParent="true"/>
+
+        <!--上一页的按钮-->
+        <Button
+            style="@style/preBtn"/>
+        <!--下一页的按钮-->
+        <Button
+            style="@style/nextBtn"
+            android:text="设置完成"/>
+    </RelativeLayout>
+</LinearLayout>

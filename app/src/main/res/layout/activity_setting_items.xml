@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_items_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000"
+            />
+        <TextView
+            android:id="@+id/tv_items_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_items_title"
+            android:textColor="#000"
+            android:textSize="16sp"
+            />
+
+        <!-- android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            为了让组合控件中的开启和关闭也响应事件，因此要关闭CheckBox响应事件的能力，以此达到事件回传给上一级的效果
+            -->
+        <CheckBox
+            android:id="@+id/cb_check"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_items_des"
+            android:background="#000"
+            >
+
+        </View>
+    </RelativeLayout>
+</RelativeLayout>

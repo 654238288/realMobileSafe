@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.liujingjing.mobilesafe.MyApplication.activity.SettingActivity">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="设置中心"/>
+
+<!--该布局文件中有两个TextView和一个CheckBox还有一条线，因为多次使用，被封装到类中-->
+
+    <!--因为这个控件中有几个属性在复用时需要更改值，因此使用到自定义属性，封装到res/values/attrs.xml中-->
+    <!--定义名空间xmlns:android(引用名)="http://schemas.android.com/apk/res/android(项目名)"-->
+
+    <com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView
+        xmlns:mobileSafe="http://schemas.android.com/apk/res/com.example.liujingjing.mobilesafe"
+        android:id="@+id/siv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobileSafe:destitle="自动更新设置"
+        mobileSafe:deson="自动更新已开启"
+        mobileSafe:desoff="自动更新已关闭"
+        >
+    </com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView>
+
+    <com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView
+        xmlns:mobileSafe="http://schemas.android.com/apk/res/com.example.liujingjing.mobilesafe"
+        android:id="@+id/siv_phone_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobileSafe:destitle="电话归属地查询"
+        mobileSafe:deson="归属地查询已开启"
+        mobileSafe:desoff="归属地查询已关闭"
+        >
+    </com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView>
+
+
+    <com.example.liujingjing.mobilesafe.MyApplication.view.SettingClickView
+        android:id="@+id/scv_toast_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.example.liujingjing.mobilesafe.MyApplication.view.SettingClickView>
+
+    <com.example.liujingjing.mobilesafe.MyApplication.view.SettingClickView
+        android:id="@+id/scv_toast_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.example.liujingjing.mobilesafe.MyApplication.view.SettingClickView>
+
+    <com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView
+        xmlns:mobileSafe="http://schemas.android.com/apk/res/com.example.liujingjing.mobilesafe"
+        android:id="@+id/siv_black_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobileSafe:destitle="黑名单拦截设置"
+        mobileSafe:deson="黑名单拦截已开启"
+        mobileSafe:desoff="黑名单拦截已关闭"
+        >
+    </com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView>
+
+
+    <com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView
+        xmlns:mobileSafe="http://schemas.android.com/apk/res/com.example.liujingjing.mobilesafe"
+        android:id="@+id/siv_app_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobileSafe:destitle="程序锁设置"
+        mobileSafe:deson="程序锁已开启"
+        mobileSafe:desoff="程序锁已关闭"
+        >
+    </com.example.liujingjing.mobilesafe.MyApplication.view.SettingItemsView>
+</LinearLayout>

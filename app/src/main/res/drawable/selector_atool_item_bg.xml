@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--点击高级工具中的条目时颜色变深的图片切换的选择器-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@android:color/darker_gray"/>
+
+    <!--自定义color.xml维护自定义的颜色-->
+    <item android:drawable="@color/pink"/>
+
+</selector>

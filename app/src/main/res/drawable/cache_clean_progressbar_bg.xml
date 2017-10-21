@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--layer-list将多张照片叠放在一起-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--清理开始时的背景图片android:id="@android:id/background"-->
+    <item android:id="@android:id/background" android:drawable="@drawable/security_progress_bg"/>
+    <!--android:id="@android:id/secondaryProgress"覆盖在进度条上的颜色，就是加载过程中追加的颜色-->
+    <item android:id="@android:id/secondaryProgress" android:drawable="@drawable/security_progress"/>
+    <!--android:id="@android:id/progress"进度条初始值颜色-->
+    <item android:id="@android:id/progress" android:drawable="@drawable/security_progress"/>
+</layer-list>

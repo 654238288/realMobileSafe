@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center">
+
+    <!--加锁程序输入密码的界面：应用图标、名称、输入框、确定按钮-->
+
+    <ImageView
+        android:id="@+id/iv_lock_app_icon"
+        android:background="@drawable/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_lock_app_name"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="应用名称"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_lock_psd"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bt_lock_psd_submit"
+        android:text="确定"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
